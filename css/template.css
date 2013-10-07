@@ -1,0 +1,1443 @@
+/*Шаблон*/
+
+#wrapper {
+    display: table;
+	width: 100%; /*Ширина шаблона*/
+	min-width: 980px;
+	height: 100%;
+	margin: 0 auto;
+	background: url(../img/top-line.png) repeat-x left 80px;
+    }
+
+.w1 {
+	width: 100%;
+	display: table-row;
+    }
+	
+/* Хедер */
+
+#header:after {
+	content: '';
+	display: block;
+	clear: both;
+    }
+	
+#header {
+    display: block; 
+    width: auto;
+	max-width: 980px;
+	margin: 0 auto;
+	background: url(../img/top-line-shad.png) no-repeat center 47px;
+    }
+	
+/* Главное меню */
+
+#mainmenu {
+    float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height: 46px;
+    }	
+	
+#mainmenu ul {
+	list-style: none;
+    }
+	
+#mainmenu ul li {
+	float: left;
+	margin: 0;
+	padding: 0 22px 0 20px;
+	background: url(../img/mainmenu/mainmenu-sep.png) no-repeat right center;
+	line-height: 46px;
+    }
+	
+#mainmenu ul li:first-child {
+	padding: 0 20px 0 0;
+    }	
+	
+#mainmenu ul li:last-child {
+	padding: 0 20px;
+	background: none;
+    }
+	
+#mainmenu ul li a {
+    color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000;
+    }
+	
+#mainmenu ul li a:hover {
+    text-decoration: underline;
+    }
+	
+#mainmenu ul li a.current { /*Активный пункт*/
+    color: #CCCCCC;
+    }
+	
+/* Аккаунт */
+
+#account {
+    float: right;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height: 46px;
+	color: #CCCCCC;
+    }	
+	
+#account ul {
+	list-style: none;
+    }
+	
+#account ul li {
+	float: left;
+	margin: 0;
+	padding: 0 22px 0 20px;
+	background: url(../img/mainmenu/mainmenu-sep.png) no-repeat left center;
+	line-height: 46px;
+    }
+	
+#account ul li:first-child {
+	padding: 0 20px 0 30px;
+	background: url(../img/add-service-top.png) no-repeat left center;
+    }
+	
+#account ul li:last-child {
+	padding: 0 0 0 20px;
+    }
+ 
+#account ul li a {
+    color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000;
+    }
+	
+#account ul li a:hover {
+    text-decoration: underline;
+    }
+	
+#account ul li a.current { /*Активный пункт*/
+    color: #CCCCCC;
+    }
+	
+/* Блок авторизации */
+
+#login-box h3 {
+    background: url(../img/sep-line.png) repeat-x left bottom;
+	}	
+
+#login-box input[type="text"], #login-box input[type="password"] { 
+    width: 288px; 
+    }	
+ 
+/* Лого */
+	
+#logo {
+    float: left;
+	margin: 10px 0;
+	clear: left;
+	}
+	
+/* Разделы */
+	
+#razdely ul {
+    float: right;
+	margin: 8px 0 0 0;
+	list-style: none;
+	position: relative;
+	z-index: 9;
+    }
+	
+#razdely ul li {
+	float: left;
+	margin: 0; 
+	padding: 0 15px;
+	position: relative; 
+    }
+
+#razdely ul li a.current { /*Активный пункт*/
+    color: #FFFFFF;
+	text-shadow: 1px 1px 1px #999999;
+    }	
+	
+#razdely ul li a {
+    float: left;
+	line-height: 46px;
+	margin: 0;
+	padding: 0;
+	color: #CCCCCC;
+	font-size: 14px;
+	color: #000000;
+	text-shadow: 0 1px 0 #FFFFFF;
+    }
+
+#razdely ul li a.haschild {
+    padding: 0 20px 0 0;
+    background: url(../img/mainmenu/hassub.png) no-repeat right center;
+    }	
+	
+#razdely ul li a:hover {
+    text-decoration: underline;
+    }
+
+/*Подменю*/
+
+#razdely ul li ul:after {
+	content: '';
+	display: block;
+	clear: both;
+    }
+	
+#razdely ul li ul { 
+	display: none;
+    }
+	
+#razdely ul li:hover ul { 
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 42px; /* верхний отступ подменю 32 + #razdely ul li a { padding: 5px 0; }*/
+	left: 15px; /*отступ подменю от левого края родителя*/
+	border: none;
+	background: url(../img/w07.png);
+    }
+		
+#razdely ul li ul li {
+	position: relative;
+	z-index: 99;
+	width: 180px;
+	padding: 5px 0;
+	border: none;
+	clear: left;
+    }	
+
+/*Пункты подменю*/
+
+#razdely ul li ul li a {
+    display: block;
+	overflow: hidden;
+	width: auto;
+	line-height: 14px;
+	padding: 5px 10px;
+	font-size: 12px;
+	color: #000000;
+	text-shadow: none;
+	}
+	
+#razdely ul li ul li a.hassubchild {
+	}	 	
+
+#razdely ul li ul li a:hover {
+    color: #333333;
+	text-decoration: none;
+	}	
+	
+/*Под-подменю*/
+
+#razdely ul li:hover ul li ul { 
+    display: none;
+	}
+	
+#razdely ul li:hover ul li:hover ul { 
+    display: block;
+	position: absolute; 
+	top: 5px;
+	left: 175px; /*отступ под-подменю = ширина блока подменю ( 180px - отступ в 5px)*/
+	z-index: 99;
+	background: url(../img/w07.png);
+	}
+	
+/* Найти сервис */
+	
+#find-service {
+    float: right;
+	width: 108px;
+	height: 40px;
+	margin: 14px 0 0 0;
+	padding: 0 0 0 50px;
+	background: url(../img/find-service.png) no-repeat left top;
+	color: #FFFFFF;
+	line-height: 32px;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px #000000;
+	}
+	
+#find-service a {
+	color: #FFFFFF;
+	}
+		
+#find-service a.current {
+	color: #999999;
+	}	
+	
+#find-service a:hover {
+	color: #CCCCCC;
+	}		
+	
+/* Центральная часть */
+ 
+#main {
+	display: block;
+	overflow: hidden;
+    width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	background: url(../img/sep-dotted.png) repeat-x left top;
+    }
+	
+/* Слайдер */
+
+#slider {
+    float: left;
+	width: 640px;
+	height: 310px; 
+	margin: 0 0 40px 0;
+	padding: 0 0 0 0;
+	background: url(../img/w03.png);
+	position: relative;
+	}
+ 
+#slider > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow640.png) no-repeat center 1px;
+	}
+	
+#slider .slides {
+    list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	}
+	 
+#slider .slides li {display: none;} /* Скрываем слайды доя загрузки JS. Избегаем дергания изображений */
+#slider .slides img {max-width: 100%; display: block;}
+ 
+#slider .slides li {
+    position: relative;
+    }
+/* Предполагаемый контейнер для устнановок анимации "slides".*/
+#slider-container {
+    position: relative;
+    }
+
+
+/* Стиль заголовков */
+.flex-caption { 
+    padding: 2%; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,.6); 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #000000; 
+    font-size: 16px; 
+    line-height: 18px;
+	font-weight: bold;
+    }
+
+/* Навигация */
+.flex-direction-nav li a {
+    width: 52px; 
+    height: 52px; 
+    margin: -13px 0 0; 
+    display: block; 
+    position: absolute; 
+    top: 50%; 
+    cursor: pointer; 
+    text-indent: -9999px;
+    } /* set negative margin-top equal to half the height on the directional-nav for perfect vertical centering */
+	
+.flex-direction-nav li a.next {
+    width: 34px; 
+    height: 34px; 
+    margin: -17px 0 0 0; 
+    display: block; 
+    position: absolute; 
+    top: 50%;
+	right: 10px; 
+    cursor: pointer; 
+    text-indent: -9999px; 
+    background: url(../img/next.png) no-repeat left top;
+	opacity: .60; 
+    -moz-opacity: 0.6;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=60)”;
+    -khtml-opacity: 0.6;
+    filter: alpha(opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    }
+	
+.flex-direction-nav li a.next:hover {
+    opacity: .90; 
+    -moz-opacity: 0.9;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=90)”;
+    -khtml-opacity: 0.9;
+    filter: alpha(opacity=90);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    }
+	
+.flex-direction-nav li a.prev {
+    width: 34px; 
+    height: 34px; 
+    margin: -17px 0 0 0; 
+    display: block; 
+    position: absolute; 
+    top: 50%;
+	left: 10px; 
+    cursor: pointer; 
+    text-indent: -9999px; 
+    background: url(../img/prev.png) no-repeat left top;
+    opacity: .60; 
+    -moz-opacity: 0.6;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=60)”;
+    -khtml-opacity: 0.6;
+    filter: alpha(opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    }
+	
+.flex-direction-nav li a.prev:hover {
+    opacity: .90; 
+    -moz-opacity: 0.9;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=90)”;
+    -khtml-opacity: 0.9;
+    filter: alpha(opacity=90);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    }
+
+/* Управление */
+.flex-control-nav { 
+    position: absolute; 
+    bottom: 26px; 
+    right: 26px;
+    } /* set negative margin-left equal to half the width on the control-nav for perfect centering */
+.flex-control-nav li {
+    margin: 0 0 0 5px; 
+    float: left;}
+.flex-control-nav li:first-child {
+    margin: 0;
+    }
+.flex-control-nav li a {
+    width: 13px; 
+    height: 13px; 
+    display: block; 
+    background: url(../img/bullets.png) no-repeat 0 0; 
+    cursor: pointer; 
+    text-indent: -9999px;}
+	
+.flex-control-nav li a:hover {
+    background-position: 0 -13px;
+    }
+.flex-control-nav li a.active {
+    background-position: 0 -26px; cursor: default;
+    }	
+	
+/* Carcure - это */
+ 
+#carcure-is {
+    float: right;
+	width: 260px;
+	height: 270px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/w03.png);
+	position: relative;
+	}
+ 
+#carcure-is > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow300.png) no-repeat center 1px;
+	}
+ 
+/* Поиск по автомобилю */
+ 
+#search-by-auto {
+    float: right;
+	width: 940px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/b02.png);
+	position: relative;
+	}
+	
+#search-by-auto h3 {
+    color: #FFFFFF;
+	text-shadow: 1px 1px 1px #666666; 
+	background: url(../img/sep-line.png) repeat-x left bottom;
+	}
+ 
+#search-by-auto > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow980.png) no-repeat center 1px;
+	}
+	
+#search-by-auto	select {
+	float: left;
+	width: 220px;
+	margin: 0 20px 0 0;
+	}
+   
+#search-by-auto	input[type="submit"] {
+	float: left;
+	width: 220px;
+	margin: 0 0 0 0;
+	}
+ 
+/* Контент */
+	
+#content {
+	float: left;
+	width: auto;
+    }
+ 
+/* Новое */
+ 
+#new {
+    float: right;
+	width: 960px; 
+	margin: 0 0 40px 0;
+	padding: 20px 0 0 20px;
+	background: url(../img/w03.png);
+	position: relative;
+	}
+	
+#new h3 { 
+	background: url(../img/sep-line.png) repeat-x left bottom;
+	margin-right: 20px;
+	}
+ 
+#new > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow980.png) no-repeat center 1px;
+	}
+	
+.article-prev {
+    float: left;
+	width: 220px;
+	margin: 0 20px 15px 0;
+	padding: 0 0 15px 0;
+	position: relative;
+	background: url(../img/sep-line.png) repeat-x left bottom;
+	}
+	
+.article-prev h4 {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 15px;
+	background: url(../img/arrow.png) no-repeat left 2px;
+	}
+	
+.article-prev a.thumb {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+	}
+	
+.article-prev p {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+	color: #666666;
+	text-align: left;
+	}
+	
+ul.article-info {
+    float: right;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0; 
+	}
+				
+ul.article-info li {
+    float: left;
+	}
+	
+ul.article-info li.date {
+    background: url(../img/date.png) no-repeat left center;
+	margin: 0 10px 0 0;
+	padding: 0 0 0 20px;
+	}
+	
+ul.article-info li.cat {
+    border-left: 1px solid #FFFFFF;
+	margin: 0 0 0 0;
+	padding: 0 0 0 10px;
+	}
+
+/* Блок 640px */
+ 
+.box640 {
+    display: block;
+	width: 600px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/w03.png);
+	position: relative;
+	clear: both;
+	}
+ 
+.box640:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+	
+.box640 h1{ 
+	background: url(../img/sep-line.png) repeat-x left bottom;
+	}
+ 
+.box640 > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow640.png) no-repeat center 1px;
+	}
+ 
+/* Новости */
+ 
+#news {
+    float: left;
+	width: 430px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/w03.png);
+	position: relative;
+	}
+ 
+#news > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow470.png) no-repeat center 1px;
+	}
+	
+.news-prev {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	}
+	
+.news-prev h4 {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+	}	
+	
+/* Акции */
+ 
+#actions {
+    float: right;
+	width: 430px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/w03.png);
+	position: relative;
+	}
+ 
+#actions > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow470.png) no-repeat center 1px;
+	}
+	
+.action-prev {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	}
+	
+.action-prev h4 {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+	}	
+			
+/* Правый блок */
+		
+#right {
+    float: right;
+	width: 300px;
+	margin: 0 0 0 0;
+	clear: none !important;
+    }
+	
+/* Блок 300px */
+ 
+.box300 {
+    display: block;
+	width: 260px; 
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background: url(../img/w03.png);
+	position: relative; 
+	}
+ 
+.box300:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+	
+.box300 h3 { 
+	background: url(../img/sep-line.png) repeat-x left bottom;
+	}
+ 
+.box300 > span { 
+    position: absolute;
+	bottom: -14px;
+	left: 0;
+    display: block;
+	width: 100%;
+	height: 14px;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/shadow300.png) no-repeat center 1px;
+	}
+	
+.box300 p {
+    line-height: 20px;
+	}
+
+/* Футер */
+ 
+#footer {
+	width: 100%;
+	overflow: hidden; /*for FF on Windows 7*/
+	display: table-footer-group;
+	background: url(../img/bottom-line.png) repeat-x left top;
+    }
+	
+#footer {
+    color: #999999;
+	text-shadow: 1px 1px 1px #000000;
+    }
+	
+#footer a {
+    color: #FFFFFF;
+    }
+	
+#footer a:hover {
+    text-decoration: underline;
+    }	
+	
+#footer .footer-holder {
+	height: 1%;
+	display: table-row;
+    }
+	
+#footer .footer-frame { 
+    display:table-cell;
+	}
+	
+#footer .footer-frame .footer-in {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	max-width: 980px;
+	margin: 0 auto;
+	}	
+	
+/* Меню в футере */
+
+#footer-menu { 
+    display: block;
+    width: auto;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	margin: 0 0 5px 0;
+	padding: 10px 0;
+    }
+	
+#footer-menu:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+
+#footer-menu ul {
+    position: relative;
+	height: 20px;
+    float: left; 
+    left: 50%;
+    list-style: none;
+    margin: 10px 0 5px 0;
+	line-height: 20px;
+    padding: 0;
+    }
+	
+#footer-menu ul li {
+    position: relative;
+    float: left;
+    right: 50%;
+    padding: 0 13px;
+	border-right: 1px solid #666666;
+    }
+	
+#footer-menu ul li a.current {
+    color: #999999;
+    }
+	
+#footer-menu ul li:last-child {
+	border-right: none;
+    }
+ 
+#copyright {
+    float: left;
+	margin: 5px 0;
+	line-height: 36px;
+	}
+	
+/* Мы в соц сетях */
+	
+#social ul {
+    float: right;
+	list-style: none;
+	margin: 5px 0;
+	}
+	
+#social ul li {
+    float: left;
+	line-height: 36px;
+	color: #FFFFFF; 
+	margin: 0 5px 0 0;
+	}
+
+#social ul li img, #social ul li span {
+    float: left;
+	margin-left: 5px;
+	opacity: .60; 
+    -moz-opacity: 0.6;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=60)”;
+    -khtml-opacity: 0.6;
+    filter: alpha(opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    }
+	
+#social ul li img:hover {
+    opacity: .90; 
+    -moz-opacity: 0.9;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=90)”;
+    -khtml-opacity: 0.9;
+    filter: alpha(opacity=90);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    }
+ 
+/* Поиск */	
+ 
+.search input[type="text"] {
+    float: left;
+	width: 248px;
+	margin: 0 0 0 0;
+	padding-right: 35px; 
+	}
+			
+.search input[type="button"] {
+    float: left;
+	width: 24px;
+	height: 24px;
+	margin: 3px 0 0 -30px;
+	line-height: 40px;
+	background: url(../img/search-button.png) no-repeat left top;
+	-webkit-box-shadow: none; /* красивости в виде тени */
+    -moz-box-shadow: none;
+    -khtml-box-shadow: none;
+    box-shadow: none;
+	opacity: .60; 
+    -moz-opacity: 0.6;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=60)”;
+    -khtml-opacity: 0.6;
+    filter: alpha(opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    }
+	
+.search input[type="button"]:hover {
+    opacity: .90; 
+    -moz-opacity: 0.9;
+    -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=90)”;
+    -khtml-opacity: 0.9;
+    filter: alpha(opacity=90);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    }
+	
+/* Авторская ссылка */
+		
+a#autorlink {
+    float: right;
+	margin: 0 0 0 0;
+	line-height: 40px;
+    color: #FFFFFF; 
+    }
+ 
+a#autorlink span {
+    color: #999999;
+    font-weight: normal;
+    }
+	
+a#autorlink:hover, a#autorlink:hover span {
+    text-decoration: underline;
+	color: #FFFFFF;
+    }	
+	
+#autormess {
+    font-weight: bold;  
+	line-height: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	background: #FF0000;
+	color: #FFFFFF;
+	} 
+	
+/* Акции (страница) */
+
+.action-box {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	}
+	
+.action-box h4 {
+    margin: 0 0 15px 0;
+	}
+	
+.action-box .action-thumb {
+    float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 20px 0 0;
+	padding: 0 0 0 0;
+	}
+	
+.action-box .action-thumb img {
+    display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	}
+	
+.action-box p.action-intro {
+    float: left;
+	width: 480px;
+	clear: none !important;
+	}
+	
+/* Пагинация */
+
+#paginacia { 
+    display: block;
+    width: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: bold;
+    }
+	
+#paginacia:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+
+#paginacia ul {
+    position: relative;
+    float: left; 
+    left: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+	
+#paginacia ul li {
+    position: relative;
+    float: left;
+    right: 50%;
+    padding: 20px;
+    }
+	
+#paginacia ul li.current a {
+    color: #999999;
+	cursor: default;
+    }	
+	
+/* Голосование (страница) */
+
+.vote-box {
+    display: block;
+	width: auto; 
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	}
+	
+.vote-box h4 {
+    margin: 0 0 15px 0;
+	}
+	
+.vote-box form {
+    line-height: 32px;
+	}
+	
+.vote-box form label {
+    padding: 0 0 0 10px;
+	}	
+	
+/* Форма обратной связи */
+
+form.feedback-form input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+form.feedback-form input[type="text"].right {
+    float: left;
+    width: 277px;
+    }
+		
+form.feedback-form textarea {
+    width: 588px;
+	max-width: 588px;
+	min-width: 588px;
+	max-height: 200px;
+    }	
+	
+/* Алфавитный указатель */
+
+#alphabeth { 
+    display: block;
+    width: auto;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+    }
+	
+#alphabeth:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+
+#alphabeth ul {
+    position: relative;
+    float: left; 
+    left: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+	
+#alphabeth ul li {
+    position: relative;
+    float: left;
+    right: 50%;
+    padding: 5px;
+    }
+	
+#alphabeth ul li.current a {
+    color: #000000;
+	cursor: default;
+    }
+	
+/* Список статей из энциклопедии */
+
+#pedia-list { 
+    display: block;
+    width: auto;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+    }
+	
+#pedia-list:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+
+#pedia-list ul {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+	
+#pedia-list ul li {
+    position: relative;
+    float: left;
+	margin: 0 0 5px 0;
+    padding: 5px 10px 5px 18px;
+	width: 272px;
+	background: url(../img/dot.png) no-repeat left 8px;
+    }	
+	
+/* Репортажи (страница) */
+
+.report-box {
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	background: url(../img/sep-dotted.png) repeat-x left bottom;
+	}
+	
+.report-box h4 {
+    margin: 0 0 15px 0;
+	}
+	
+.report-box .report-thumb {
+    float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 20px 0 0;
+	padding: 0 0 0 0;
+	}
+	
+.report-box .report-thumb img {
+    display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	}
+	
+.report-box p.report-intro {
+    float: left;
+	width: 480px;
+	clear: none !important;
+	}
+	
+/* Аккаунт */
+ 
+/* Персоняльная информация */
+ 
+.account-pic {
+    float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 20px 0 0;
+	padding: 0 0 0 0;
+	}
+	
+.account-pic img {
+    display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	}
+	
+/* Персоняльная информация */
+ 
+.account-info {
+    float: left;
+	width: 360px !important;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	}
+	
+/* Блок редактирования персональных данных */
+ 
+#account-info-edit input[type="text"].left, #account-info-edit input[type="password"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+#account-info-edit input[type="text"].right, #account-info-edit input[type="password"].right {
+    float: left;
+    width: 277px;
+    }
+	
+#account-info-edit textarea {
+    width: 588px;
+	max-width: 588px;
+	min-width: 588px;
+	max-height: 200px;
+    }
+
+/* Фото автомобиля */
+
+.account-car-pic {
+    float: right;
+	width: 100px;
+	height: 100px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	}
+	
+.account-car-pic img {
+    display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	}
+
+/* Карта деталей авто */
+
+.account-car-map-pic {
+    padding: 0 0 15px 0; 
+	}
+	
+.account-car-map-pic a { 
+	}
+		
+.account-car-map-pic img {
+    display: block;
+	width: 260px;
+	height: 260px;
+	margin: 0;
+	padding: 0;
+	}	
+ 
+/* Поиск сервис */
+ 
+#service-search {
+    float: left;
+	margin: 0 0 20px 0;
+	line-height: 40px;
+	}
+	
+#service-search input[type="text"] {
+    float: left;
+	width: 466px;
+	margin: 0 20px 0 0; 
+	}
+			
+#service-search input[type="button"] {
+    float: left; 
+	width: 100px;
+    }
+	
+/* Фильтр сервисов */
+ 
+#services-filter { 
+    display: block;
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0 0 0 0;
+    }
+	
+#services-filter	select {
+	float: left;
+	width: 180px;
+	margin: 0 20px 0 0;
+	}
+   
+#services-filter	input[type="submit"] {
+	float: left;
+	width: 200px;
+	margin: 0 0 0 0;
+	}	
+	
+/* Список добавленных сервисов */
+ 
+#services-list ul {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+	
+#services-list ul li {
+    position: relative;
+    float: left;
+	margin: 0 0 5px 0;
+    padding: 5px 10px 5px 18px;
+	width: 272px;
+	background: url(../img/dot.png) no-repeat left 8px;
+    }
+	
+/* Добавить сервис */
+
+a.add-service-link {
+    padding: 5px 0 5px 22px;
+	background: url(../img/add-service.png) no-repeat left center;
+	}
+	
+/* Блок добавления сервиса */
+ 
+#add-service input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+#add-service input[type="text"].right {
+    float: left;
+    width: 277px;
+    }
+	
+/* Пожаловаться на авто */
+ 
+.complane-form input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+.complane-form input[type="text"].right {
+    float: left;
+    width: 277px;
+    }
+		
+.complane-form textarea {
+    width: 588px;
+	max-width: 588px;
+	min-width: 588px;
+	max-height: 200px;
+    }
+	
+/* Страница сервиса */
+
+/* Запись на ТО */
+
+a.to {
+    float: right; 
+	padding: 5px 0 5px 22px;
+	background: url(../img/to.png) no-repeat left center;
+	font-size: 13px;
+	font-weight: bold;
+	}
+ 
+#diller-to-subscribe input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+#diller-to-subscribe input[type="text"].right {
+    float: left;
+    width: 277px;
+    }
+		
+#diller-to-subscribe textarea {
+    width: 588px;
+	max-width: 588px;
+	min-width: 588px;
+	max-height: 200px;
+    }
+	
+/* Список услуг сервиса */
+ 
+#services-services ul {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+	
+#services-services ul li {
+    position: relative;
+    float: left;
+	margin: 0 0 5px 0;
+    padding: 5px 10px 5px 18px;
+	width: 272px;
+	background: url(../img/dot.png) no-repeat left 8px;
+    }
+	
+#services-services ul li span {
+    color: #000000;
+    }
+
+/* Форма регистрации */
+
+form.registration-form input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+form.registration-form input[type="text"].right {
+    float: left;
+    width: 277px;
+    }
+		
+form.registration-form textarea {
+    width: 588px;
+	max-width: 588px;
+	min-width: 588px;
+	max-height: 200px;
+    }
+	
+/* Блок добавления сервиса */
+ 
+#add-service input[type="text"].left {
+    float: left;
+    width: 277px;
+	margin: 0 20px 0 0;
+    }	
+	
+#add-service input[type="text"].right {
+    float: left;
+    width: 277px;
+    }	
